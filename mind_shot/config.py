@@ -34,7 +34,7 @@ def _env_bool(name: str, default: bool = False) -> bool:
 
 # ── Delivery ────────────────────────────────────────────────────────────────
 WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "").strip()
-TG_TOKEN = os.environ.get("TG_TOKEN", "").strip()
+TG_TOKEN = "".join(os.environ.get("TG_TOKEN", "").split())
 TG_CHAT_ID = os.environ.get("TG_CHAT_ID", "").strip()
 
 # ── Display / account ───────────────────────────────────────────────────────
